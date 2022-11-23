@@ -6,8 +6,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public int targetEnemy;
-    public int score;
+    public static int targetEnemy;
+    public static int score;
     public static Action onWin;
 
     void Start()
