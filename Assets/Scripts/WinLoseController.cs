@@ -10,11 +10,13 @@ public class WinLoseController : MonoBehaviour
     public void ShowWin()
     {
         canvasWin.SetActive(true);
+        Time.timeScale = 0;
     }
 
     public void ShowLose()
     {
         canvasLose.SetActive(true);
+        Time.timeScale = 0;
     }
 
     private void OnEnable()

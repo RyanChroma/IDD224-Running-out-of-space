@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,7 +18,11 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            Restart();
+            Time.timeScale = 1;
+        }
     }
 
     private void OnEnable()
@@ -39,4 +44,9 @@ public class GameManager : MonoBehaviour
             onWin?.Invoke();
         }
     }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }    
 }
