@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public static Action onLose;
+    public static Action onLose; 
     
     void Start()
     {
