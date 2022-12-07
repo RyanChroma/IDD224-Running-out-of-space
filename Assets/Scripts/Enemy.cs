@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
 
         playerHealth.DecreaseHealth(damage);
         Destroy(gameObject);
+        onEnemyDead?.Invoke();
     }
 
     public void EnemyDead()

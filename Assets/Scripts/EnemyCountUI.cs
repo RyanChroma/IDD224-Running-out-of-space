@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class EnemyCountUI : MonoBehaviour
 {
     public Text enemyCount;
+    public GameManager gameManager => GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
 
     void Start()
     {
@@ -14,6 +15,6 @@ public class EnemyCountUI : MonoBehaviour
 
     void Update()
     {
-        enemyCount.text = (GameManager.targetEnemy - GameManager.score).ToString();
+        enemyCount.text = (gameManager.targetEnemy - GameManager.score).ToString();
     }
 }

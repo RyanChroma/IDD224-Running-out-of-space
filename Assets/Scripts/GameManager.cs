@@ -7,20 +7,22 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static int targetEnemy;
+    public int targetEnemy;
     public static int score;
     public static Action onWin;
 
     void Start()
     {
+        score = 0;
         targetEnemy = GameObject.FindGameObjectsWithTag("Enemy").Count();
     }
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.R))
+        if(Input.GetKeyDown(KeyCode.Escape))
         {
-            Restart();
+            SceneManager.LoadScene("mainmenu");
+            Cursor.lockState = CursorLockMode.None;
             Time.timeScale = 1;
         }
     }

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2574699051452236835}
   - component: {fileID: 2574699051452236863}
   - component: {fileID: 7823420485950215676}
+  - component: {fileID: 9044242526062608550}
   m_Layer: 7
   m_Name: Enemy lock on
   m_TagString: Enemy
@@ -62,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c272e209ade07f140b79ce2bcf7bf51e, type: 2}
+  - {fileID: 2100000, guid: ea8b9d9fc5493a342ad0cd1b81d3d451, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -141,9 +142,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
-        m_MethodName: EnemyDead
+      - m_Target: {fileID: 9044242526062608550}
+        m_TargetAssemblyTypeName: EnemyLockOn, Assembly-CSharp
+        m_MethodName: EnemyLockOnDead
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -153,3 +154,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &9044242526062608550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2574699051452236836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0873d77227fcb6344a1a80cf2fbc2315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyLockOnSpeed: 0.05
+  damage: 1000

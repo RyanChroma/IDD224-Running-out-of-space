@@ -33,5 +33,11 @@ public class EnemyLockOn : MonoBehaviour
 
         playerHealth.DecreaseHealth(damage);
         Destroy(gameObject);
+        Enemy.onEnemyDead?.Invoke();
+    }
+
+    public void EnemyLockOnDead()
+    {
+        Enemy.onEnemyDead?.Invoke();
     }
 }
